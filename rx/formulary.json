@@ -1,0 +1,6 @@
+{
+  "lisinopril 10mg": {"tier": 1, "price": 8.00, "prior_auth": false},
+  "atorvastatin 20mg": {"tier": 1, "price": 12.00, "prior_auth": false},
+  "eliquis 5mg": {"tier": 2, "price": 520.00, "prior_auth": false},
+  "ozempic 1mg": {"tier": 3, "price": 950.00, "prior_auth": true}
+}

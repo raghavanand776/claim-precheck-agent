@@ -1,0 +1,5 @@
+{
+  "M200": {"active": true, "copays": {"1": 10, "2": 40, "3": 90}, "prior_auths": []},
+  "M201": {"active": true, "copays": {"1": 10, "2": 40, "3": 90}, "prior_auths": ["ozempic 1mg"]},
+  "M202": {"active": false, "copays": {"1": 10, "2": 40, "3": 90}, "prior_auths": []}
+}

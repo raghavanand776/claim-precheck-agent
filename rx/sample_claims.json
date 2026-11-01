@@ -1,0 +1,9 @@
+[
+  {"claim_id": "rx_001", "member_id": "M200", "drug": "atorvastatin 20mg", "fill_date": "2026-10-31"},
+  {"claim_id": "rx_002", "member_id": "M200", "drug": "lisinopril 10mg", "fill_date": "2026-10-31"},
+  {"claim_id": "rx_003", "member_id": "M200", "drug": "ozempic 1mg", "fill_date": "2026-10-31"},
+  {"claim_id": "rx_004", "member_id": "M201", "drug": "ozempic 1mg", "fill_date": "2026-10-31"},
+  {"claim_id": "rx_005", "member_id": "M202", "drug": "atorvastatin 20mg", "fill_date": "2026-10-31"},
+  {"claim_id": "rx_006", "member_id": "M200", "drug": "nexium 40mg", "fill_date": "2026-10-31"},
+  {"claim_id": "rx_007", "member_id": "M201", "drug": "lisinopril 10mg", "fill_date": "2026-10-31"}
+]
