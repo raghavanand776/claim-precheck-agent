@@ -58,6 +58,26 @@ At the pharmacy counter, a claim is decided in seconds. `rx_adjudicator.py` runs
 
 ---
 
+### Sample request and response
+
+```bash
+curl -s -X POST localhost:8000/adjudicate \
+  -H "Content-Type: application/json" \
+  -d '{"claim_id":"rx_001","member_id":"M200","drug":"atorvastatin 20mg","fill_date":"2026-10-31"}'
+```
+
+```json
+{"status": "APPROVED", "price": 12.0, "patient_pays": 10, "plan_pays": 2.0}
+```
+
+A rejected claim returns a standard reject code and a plain-language reason:
+
+```json
+{"status": "REJECTED", "reject_code": "79", "message": "Refill too soon: 10 days since last fill, earliest is day 23"}
+```
+
+Results for all 7 sample claims are in [`rx/sample_results.md`](rx/sample_results.md).
+
 ## Run it
 
 ```bash
@@ -94,3 +114,7 @@ python3 agent.py claim_006       # one claim
 - Add network, database and concurrency to the load test for a more realistic latency picture
 
 Built with Python, the Claude API (tool use), FastAPI and pytest.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
