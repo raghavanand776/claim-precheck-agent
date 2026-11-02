@@ -1,0 +1,56 @@
+
+claim_001
+    Claude calls read_claim({'claim_id': 'claim_001'})
+    Claude calls validate_codes({'claim_id': 'claim_001'})
+    Claude calls lookup_payer_rules({'payer': 'BlueSky Health'})
+    Claude calls check_eligibility({'member_id': 'M100'})
+  Verdict: READY  (correct)
+
+claim_002
+    Claude calls read_claim({'claim_id': 'claim_002'})
+    Claude calls validate_codes({'claim_id': 'claim_002'})
+    Claude calls lookup_payer_rules({'payer': 'BlueSky Health'})
+    Claude calls check_eligibility({'member_id': 'M101'})
+  Verdict: FIX NEEDED  (correct)
+    - Change CPT code from 90837 to 90834. A 40-minute session fits the 38–52 minute range for 90834, not the 53+ minute range for 90837.
+
+claim_003
+    Claude calls read_claim({'claim_id': 'claim_003'})
+    Claude calls validate_codes({'claim_id': 'claim_003'})
+    Claude calls lookup_payer_rules({'payer': 'BlueSky Health'})
+    Claude calls check_eligibility({'member_id': 'M102'})
+  Verdict: FIX NEEDED  (correct)
+    - Add modifier 95 for telehealth session (BlueSky Health requires this modifier for video visits)
+
+claim_004
+    Claude calls read_claim({'claim_id': 'claim_004'})
+    Claude calls validate_codes({'claim_id': 'claim_004'})
+    Claude calls lookup_payer_rules({'payer': 'BlueSky Health'})
+    Claude calls check_eligibility({'member_id': 'M104'})
+  Verdict: LIKELY DENIAL  (correct)
+    - Member M104 coverage is not active with BlueSky Health
+
+claim_005
+    Claude calls read_claim({'claim_id': 'claim_005'})
+    Claude calls validate_codes({'claim_id': 'claim_005'})
+    Claude calls lookup_payer_rules({'payer': 'BlueSky Health'})
+    Claude calls check_eligibility({'member_id': 'M100'})
+  Verdict: FIX NEEDED  (correct)
+    - Session was conducted by video (per session note), but claim shows telehealth=false. Add modifier 95 to indicate telehealth service per BlueSky Health rules.
+
+claim_006
+    Claude calls read_claim({'claim_id': 'claim_006'})
+    Claude calls validate_codes({'claim_id': 'claim_006'})
+    Claude calls lookup_payer_rules({'payer': 'BlueSky Health'})
+    Claude calls check_eligibility({'member_id': 'M101'})
+  Verdict: FIX NEEDED  (correct)
+    - Change CPT code from 90834 to 90832: session was only 25 minutes (per session note), which falls in the 16-37 minute range for 90832, not the 38-52 minute range for 90834
+
+claim_007
+    Claude calls read_claim({'claim_id': 'claim_007'})
+    Claude calls check_eligibility({'member_id': 'M102'})
+    Claude calls validate_codes({'claim_id': 'claim_007'})
+    Claude calls lookup_payer_rules({'payer': 'BlueSky Health'})
+  Verdict: READY  (correct)
+
+Score: 7/7

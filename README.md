@@ -36,6 +36,8 @@ All data is synthetic. No real patient information is used.
 
 ---
 
+The full output of a 7/7 run is in [`eval_results.txt`](eval_results.txt): every tool call the agent made and the fix it recommended for each claim. Wording can vary slightly between runs.
+
 ## Part 2: Rx adjudication API
 
 At the pharmacy counter, a claim is decided in seconds. `rx_adjudicator.py` runs the checks in order and stops at the first failure:
