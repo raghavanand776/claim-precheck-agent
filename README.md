@@ -1,5 +1,7 @@
 # Claim Pre-Check Agent & Rx Adjudication API
 
+[![tests](https://github.com/raghavanand776/claim-precheck-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/raghavanand776/claim-precheck-agent/actions/workflows/tests.yml)
+
 A learning project exploring where AI helps, and where it doesn't, in healthcare claims.
 
 It has two parts:
